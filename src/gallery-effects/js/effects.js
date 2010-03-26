@@ -242,7 +242,7 @@
 				return node;
 			}
 			
-			node._oveflow = DOM.getStyle(node, "overflow") || "auto";
+			node._overflow = DOM.getStyle(node, "overflow") || "auto";
 			
 			if (node._overflow !== "hidden") {
 				DOM.setStyle(node, "overflow", "hidden");
