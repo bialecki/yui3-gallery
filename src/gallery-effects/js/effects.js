@@ -472,8 +472,8 @@
          * queue to be processed and it's the responsibility of the creator to make sure the run
          * and finish method are called.
          * 
-         * @attribute wait
-         * @value true
+         * @attribute managed
+         * @value false
          * @type boolean
          */
 		managed: {
