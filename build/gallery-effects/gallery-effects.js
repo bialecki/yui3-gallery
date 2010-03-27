@@ -244,7 +244,7 @@ YUI.add('gallery-effects', function(Y) {
 				return node;
 			}
 			
-			node._oveflow = DOM.getStyle(node, "overflow") || "auto";
+			node._overflow = DOM.getStyle(node, "overflow") || "auto";
 			
 			if (node._overflow !== "hidden") {
 				DOM.setStyle(node, "overflow", "hidden");
@@ -474,8 +474,8 @@ YUI.add('gallery-effects', function(Y) {
          * queue to be processed and it's the responsibility of the creator to make sure the run
          * and finish method are called.
          * 
-         * @attribute wait
-         * @value true
+         * @attribute managed
+         * @value false
          * @type boolean
          */
 		managed: {
