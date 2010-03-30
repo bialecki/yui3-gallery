@@ -820,6 +820,44 @@
 	});
 	
 	/***
+	 * This effect scrolls a node to a specific position.
+	 * 
+	 * @class Y.Effects.Scroll
+	 * @param config {Object} has of configuration name/value pairs
+	 */
+	Effects.Scroll = function (config) {
+		Effects.Scroll.superclass.constructor.apply(this, arguments);
+	};
+	
+	Effects.Scroll.NAME = "scroll";
+	
+	Y.extend(Effects.Scroll, Effects.BaseEffect, {
+		
+		/**
+		 * 
+         * @method initializer
+         * @param config {Object} has of configuration name/value pairs
+         */
+		initializer: function (config) {
+			this.addToQueue();
+		},
+		
+		/**
+		 * Normalize the "to" and "from" properties for scrolling.
+		 * 
+         * @method setup
+         */
+		setup: function () {
+			var config = this.get("config");
+			
+			config.to = { scroll: config.to };
+			config.from = { scroll: config.from };
+
+			this.set("anim", new Y.Anim(config));
+		}
+	});
+	
+	/***
 	 * Effect for generic mutations. This is the closest to a wrapper for the Y.Anim object
 	 * itself.
 	 * 
@@ -1390,7 +1428,7 @@
 	 *********************************/
 	
 	var ExtObj = {},
-		effects = "opacity move scale morph highlight appear fade puff blindUp blindDown".split(" ");
+		effects = "opacity move scroll scale morph highlight appear fade puff blindUp blindDown".split(" ");
 	
 	Y.Array.each(effects, function (effect) {
 		ExtObj[effect] = function (node, config) {

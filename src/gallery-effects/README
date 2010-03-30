@@ -3,6 +3,10 @@ animation libraries to YUI while also leveraging the great YUI 3 Anim module.
 
 == CHANGELOG ==
 
+Version 0.6.1
+-------------
+Added support for a scroll effect.
+
 Version 0.6
 -----------
 
