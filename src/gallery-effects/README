@@ -3,6 +3,13 @@ animation libraries to YUI while also leveraging the great YUI 3 Anim module.
 
 == CHANGELOG ==
 
+Version 0.6
+-----------
+
+Refactored events so that now you can move easily subscribe to two sets of events: setup and
+finish.  The most common use case by far will be finish (in fact it may be the only important
+one), but you have access to either.
+
 Version 0.5
 -----------
 
