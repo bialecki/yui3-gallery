@@ -575,7 +575,7 @@ YUI.add('gallery-effects', function(Y) {
 			
 			var anim = this.get("anim");
 			
-			anim.on("end", function () { this.fire(FINISH); }, this);
+			anim.on("end", function (e) { this.fire(FINISH, { animEnd: e }); }, this);
 			anim.run();
 		},
 		
@@ -696,7 +696,7 @@ YUI.add('gallery-effects', function(Y) {
 				// we want to bind to the end event of that effect's animation to execute
 				// the finish method.
 				effects[effects.length - 1].after("animChange", function (event) {
-					event.newVal.on("end", function () { this.fire(FINISH); } , this);
+					event.newVal.on("end", function () { this.fire(FINISH, { animEnd : null }); } , this);
 				}, this);
 				
 				// For each animation, set the node it will run on and merge the configuration
@@ -709,7 +709,7 @@ YUI.add('gallery-effects', function(Y) {
 				});
 			} else {
 				// If there are no effects, then we're done.
-				this.fire(FINISH);
+				this.fire(FINISH, { animEnd : null });
 			}
 		}
 	});
