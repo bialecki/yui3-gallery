@@ -730,4 +730,4 @@ YUI.add('gallery-lightbox', function(Y) {
 	};
 
 
-}, '@VERSION@' ,{requires:['base','node','anim']});
+}, '@VERSION@' ,{requires:['base','node','anim','selector-css3']});
