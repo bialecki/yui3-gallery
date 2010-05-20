@@ -730,8 +730,4 @@ YUI.add('gallery-lightbox', function(Y) {
 	};
 
 
-<<<<<<< HEAD
-}, '@VERSION@' ,{requires:['base','node','anim','selector-css3']});
-=======
 }, 'gallery-2010.04.08-12-35' ,{requires:['base','node','anim','selector-css3']});
->>>>>>> upstream/master
