@@ -313,4 +313,4 @@ YUI.add('gallery-data-storage', function(Y) {
 	Y.DataStorage = Data;
 
 
-}, '@VERSION@' ,{requires:['node']});
+}, 'gallery-2010.03.16-20' ,{requires:['node']});
